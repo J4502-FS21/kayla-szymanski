@@ -1,11 +1,13 @@
-body {
+<head>
+<title>
   background: lightpink;
-  font-family: "Poller One", "Roboto", sans-serif;
+  font-family: "Poller One, Roboto", sans-serif;
   width: 90%;
   max-width: 600px;
   margin: auto;
   margin-top: 3rem;
-}
+<title/>
+
 
 img {width:100%;}
 
@@ -16,28 +18,4 @@ h1 {
 hr {
   margin-top: 25px;
   margin-bottom: 20px;
-}
-
-table td, th {
-  border: 1px solid lightgray;
-  padding: 8px;
-}
-
-table th {
-  color: gold;
-  background-color: black;
-}
-
-table {
-  border: 1px solid darkgray;
-  background-color: white;
-  width: 100%;
-  margin-bottom: 200px;
-}
-
-tr:nth-child(even) {
-  background: #CCC
-}
-tr:nth-child(odd) {
-  background: #FFF
 }
