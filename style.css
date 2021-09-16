@@ -1,22 +1,43 @@
-body {
-
+h1{
+  font-family:'Montserrat', sans-serif;
+  font-weight: 400;
+}
+h2{
+  font-family:'Italiana', serif;
+  font-weight: 400;
+}
+head{
+  background-color: #CEBFA7;
+  border: 1px solid #756D60;
+}
+body{
   background: #EBDABF;
   text-align: center;
+  margin: auto;
+  margin-top: 3rem;
+  max-width: 600px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
+nav{
+  background-color: #EBDABF;
+}
+ul{
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  background: #3B3730
-  font-family: 'Montserrat', sans-serif;
-
 }
-img {display:block;margin: auto;}
-
-h1, h2 {
-  font-family: 'Italiana', serif;
-  color: #3B3730;
-  font-size: 2rem;
+li{
+  margin: 2px;
+  padding: 30px;
+  border: 1px solid white;
 }
-
-ul {
-  font-family: 'Montserrat', sans-serif;
-  font-style:italic;
+a{
+  text-decoration:none;
+  font-weight: bold;
+  font-style: italic;
+  color: #756D60;
+}
+a:hover{
+  color: white;
 }
