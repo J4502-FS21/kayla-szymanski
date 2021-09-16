@@ -1,13 +1,18 @@
 body {
 
   background: #EBDABF;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #3B3730
   font-family: 'Montserrat', sans-serif;
+
 }
 img {display:block;margin: auto;}
 
 h1, h2 {
   font-family: 'Italiana', serif;
-  color: gold;
+  color: #3B3730;
   font-size: 2rem;
 }
 
