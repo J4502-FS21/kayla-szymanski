@@ -1,14 +1,24 @@
 h1{
-  font-family:'Montserrat', sans-serif;
-  font-weight: 400;
-}
-h2{
   font-family:'Italiana', serif;
   font-weight: 400;
 }
+
+a{
+  text-decoration:none;
+  font-weight: none;
+  font-style: none;
+  color: #756D60;
+}
+
+h2{
+  font-family:'Montserrat', sans-serif;
+  font-weight: 400;
+  color: text; #CEBFA7;
+}
+
 head{
-  background-color: #CEBFA7;
-  border: 1px solid #756D60;
+  background-color: #756D60;
+  border: 1px solid white;
 }
 body{
   background: #EBDABF;
@@ -20,7 +30,7 @@ body{
   font-style: italic;
 }
 nav{
-  background-color: #EBDABF;
+  background-color: #756D60;
 }
 ul{
   list-style-type: none;
@@ -36,7 +46,7 @@ a{
   text-decoration:none;
   font-weight: bold;
   font-style: italic;
-  color: #756D60;
+  color: #CEBFA7;
 }
 a:hover{
   color: white;
