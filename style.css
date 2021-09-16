@@ -1,8 +1,8 @@
 body {
 
   background: #EBDABF;
-  font-family: 'Italiana', serif;
-
+  font-family: 'Montserrat', sans-serif;
+}
 img {width:100%;}
 
 h1 {
@@ -31,7 +31,7 @@ table {
   margin-bottom: 200px;
 }
 
-tr:nth-child(even) {
+p:nth-child(1) {
   background: #CCC
 }
 tr:nth-child(odd) {
