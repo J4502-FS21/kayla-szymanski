@@ -3,37 +3,14 @@ body {
   background: #EBDABF;
   font-family: 'Montserrat', sans-serif;
 }
-img {width:100%;}
+img {display:block;margin: auto;}
 
-h1 {
+h1, h2 {
+  font-family: 'Italiana', serif;
+  color: gold;
   font-size: 2rem;
 }
 
-hr {
-  margin-top: 25px;
-  margin-bottom: 20px;
-}
-
-table td, th {
-  border: 1px solid lightgray;
-  padding: 8px;
-}
-
-table th {
-  color: gold;
-  background-color: black;
-}
-
-table {
-  border: 1px solid darkgray;
-  background-color: white;
-  width: 100%;
-  margin-bottom: 200px;
-}
-
-p:nth-child(1) {
-  background: #CCC
-}
-tr:nth-child(odd) {
-  background: #FFF
+ul {
+  font-style:italic;
 }
