@@ -1,8 +1,6 @@
-
-
 <html lang="en">
 <head>
-  <title>Comparison of Fast Fashion vs Designer</title>
+  <title>Quiz Yourself!</title>
   <meta charset="utf-8">
   <meta name="description" content="Kayla Szymanski">
   <meta name="author" content="Kayla Szymanski">
@@ -10,9 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quiz.css">
 </head>
-
 <body>
 
   <div class="logo">
@@ -44,39 +41,148 @@
 
     </nav>
 
-    <div class="fashionnova">
-            <img class="fashionnova" src="fashionnova.jpg" alt="top: left: Jennifer Lopez is wearing her famous green Versace dress. Left: a dress that Fashion Nova came out with that is idenitcal."
-            width=800
-            height=400/>
-            <div class="head1"
-        </div>
+    <var quiz = {
+      // (A) PROPERTIES
+      // (A1) QUESTIONS & ANSWERS
+      // Q = QUESTION, O = OPTIONS, A = CORRECT ANSWER
+      data: [
+      {
+        q : "What is the standard distance between the target and archer in Olympics?",
+        o : [
+          "50 meters",
+          "70 meters",
+          "100 meters",
+          "120 meters"
+        ],
+        a : 1 // arrays start with 0, so answer is 70 meters
+      },
+      {
+        q : "Which is the highest number on a standard roulette wheel?",
+        o : [
+          "22",
+          "24",
+          "32",
+          "36"
+        ],
+        a : 3
+      },
+      {
+        q : "How much wood could a woodchuck chuck if a woodchuck would chuck wood?",
+        o : [
+          "400 pounds",
+          "550 pounds",
+          "700 pounds",
+          "750 pounds"
+        ],
+        a : 2
+      },
+      {
+        q : "Which is the seventh planet from the sun?",
+        o : [
+          "Uranus",
+          "Earth",
+          "Pluto",
+          "Mars"
+        ],
+        a : 0
+      },
+      {
+        q : "Which is the largest ocean on Earth?",
+        o : [
+          "Atlantic Ocean",
+          "Indian Ocean",
+          "Arctic Ocean",
+          "Pacific Ocean"
+        ],
+        a : 3
+      }
+      ],
 
+      // (A2) HTML ELEMENTS
+      hWrap: null, // HTML quiz container
+      hQn: null, // HTML question wrapper
+      hAns: null, // HTML answers wrapper
 
-    <div id="intro">
-           <h2> Fashion Nova vs Versace </h2>
+      // (A3) GAME FLAGS
+      now: 0, // current question
+      score: 0, // current score
 
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Tortor at risus viverra adipiscing at in tellus integer. Viverra maecenas accumsan lacus vel. Dictum sit amet justo donec enim diam vulputate ut pharetra. Fringilla phasellus faucibus scelerisque eleifend donec. Ac auctor augue mauris augue neque. In iaculis nunc sed augue. Risus sed vulputate odio ut enim. Cras pulvinar mattis nunc sed blandit libero. Risus pretium quam vulputate dignissim suspendisse in est ante. In fermentum posuere urna nec tincidunt. Pellentesque nec nam aliquam sem et tortor consequat id. Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. Vitae nunc sed velit dignissim sodales ut eu. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Feugiat scelerisque varius morbi enim nunc faucibus. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Bibendum enim facilisis gravida neque convallis a cras semper auctor. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Porttitor leo a diam sollicitudin tempor id eu nisl. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Proin libero nunc consequat interdum varius sit. Arcu odio ut sem nulla pharetra diam. Eget sit amet tellus cras adipiscing enim eu. Volutpat commodo sed egestas egestas fringilla phasellus. Integer feugiat scelerisque varius morbi. Tortor id aliquet lectus proin nibh nisl condimentum. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Volutpat est velit egestas dui id ornare arcu odio ut. Fames ac turpis egestas maecenas pharetra. Leo a diam sollicitudin tempor id. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit. Tellus in metus vulputate eu scelerisque felis imperdiet.</p>
+      // (B) INIT QUIZ HTML
+      init: function(){
+        // (B1) WRAPPER
+        quiz.hWrap = document.getElementById("quizWrap");
 
-       </div>
+        // (B2) QUESTIONS SECTION
+        quiz.hQn = document.createElement("div");
+        quiz.hQn.id = "quizQn";
+        quiz.hWrap.appendChild(quiz.hQn);
 
-       <div class="gucci">
-               <img class="gucci" src="gucci.jpg" alt="left: A cardigan designed by Gucci. Right: An identical cardigan designed by Zara."
-               width=900
-               height=600
-               padding= auto/>
-               <div class="head1"
-           </div>
+        // (B3) ANSWERS SECTION
+        quiz.hAns = document.createElement("div");
+        quiz.hAns.id = "quizAns";
+        quiz.hWrap.appendChild(quiz.hAns);
 
-           <div id="intro">
-                  <h2> Gucci vs Zara </h2>
+        // (B4) GO!
+        quiz.draw();
+      },
 
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Tortor at risus viverra adipiscing at in tellus integer. Viverra maecenas accumsan lacus vel. Dictum sit amet justo donec enim diam vulputate ut pharetra. Fringilla phasellus faucibus scelerisque eleifend donec. Ac auctor augue mauris augue neque. In iaculis nunc sed augue. Risus sed vulputate odio ut enim. Cras pulvinar mattis nunc sed blandit libero. Risus pretium quam vulputate dignissim suspendisse in est ante. In fermentum posuere urna nec tincidunt. Pellentesque nec nam aliquam sem et tortor consequat id. Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. Vitae nunc sed velit dignissim sodales ut eu. Arcu cursus vitae congue mauris rhoncus aenean vel elit. Feugiat scelerisque varius morbi enim nunc faucibus. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Bibendum enim facilisis gravida neque convallis a cras semper auctor. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Porttitor leo a diam sollicitudin tempor id eu nisl. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Proin libero nunc consequat interdum varius sit. Arcu odio ut sem nulla pharetra diam. Eget sit amet tellus cras adipiscing enim eu. Volutpat commodo sed egestas egestas fringilla phasellus. Integer feugiat scelerisque varius morbi. Tortor id aliquet lectus proin nibh nisl condimentum. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Volutpat est velit egestas dui id ornare arcu odio ut. Fames ac turpis egestas maecenas pharetra. Leo a diam sollicitudin tempor id. Sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit. Tellus in metus vulputate eu scelerisque felis imperdiet.</p>
+      // (C) DRAW QUESTION
+      draw: function(){
+        // (C1) QUESTION
+        quiz.hQn.innerHTML = quiz.data[quiz.now].q;
 
-       <footer> Text, graphics, photos, illustrations and web design by Kayla Szymanski. </footer>
+        // (C2) OPTIONS
+        quiz.hAns.innerHTML = "";
+        for (let i in quiz.data[quiz.now].o) {
+          let radio = document.createElement("input");
+          radio.type = "radio";
+          radio.name = "quiz";
+          radio.id = "quizo" + i;
+          quiz.hAns.appendChild(radio);
+          let label = document.createElement("label");
+          label.innerHTML = quiz.data[quiz.now].o[i];
+          label.setAttribute("for", "quizo" + i);
+          label.dataset.idx = i;
+          label.addEventListener("click", quiz.select);
+          quiz.hAns.appendChild(label);
+        }
+      },
 
-   </body>
-    <footer> Text, graphics, photos, illustrations and web design by Kayla Szymanski. </footer>
+      // (D) OPTION SELECTED
+      select: function(){
+        // (D1) DETACH ALL ONCLICK
+        let all = quiz.hAns.getElementsByTagName("label");
+        for (let label of all) {
+          label.removeEventListener("click", quiz.select);
+        }
 
-   <script src="main.js" type="text/javascript"></script>
+        // (D2) CHECK IF CORRECT
+        let correct = this.dataset.idx == quiz.data[quiz.now].a;
+        if (correct) {
+          quiz.score++;
+          this.classList.add("correct");
+        } else {
+          this.classList.add("wrong");
+        }
 
-   </html>
+        // (D3) NEXT QUESTION OR END GAME
+        quiz.now++;
+        setTimeout(function(){
+          if (quiz.now < quiz.data.length) { quiz.draw(); }
+          else {
+            quiz.hQn.innerHTML = `You have answered ${quiz.score} of ${quiz.data.length} correctly.`;
+            quiz.hAns.innerHTML = "";
+          }
+        }, 1000);
+      },
+
+      // (E) RESTART QUIZ
+      reset : function () {
+        quiz.now = 0;
+        quiz.score = 0;
+        quiz.draw();
+      }
+    };
+    window.addEventListener("load", quiz.init);
+  </javascript>
+</html>
