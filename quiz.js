@@ -101,6 +101,6 @@ p {
 }
 
 html, body {
-  background: #756D60;
+  background: #CEBFA7;
   font-family: Montserrat, sans-serif;
 }
