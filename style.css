@@ -48,6 +48,10 @@ p {
   text-align: center;
 }
 
+li{
+  display: list-item;
+text-align: justify;
+}
 #menu_nav {
   background-color: #756D60;
   font-family: 'Montserrat', sans-serif;
