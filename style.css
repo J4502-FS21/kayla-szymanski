@@ -1,3 +1,5 @@
+
+
 body{
   background: #EBDABF;
   text-align: center;
@@ -51,6 +53,15 @@ p {
   padding: 10px;
   max-width: 800px;
   text-align: left;
+}
+
+
+#circle{
+  width: 80px;
+  height: 80px;
+  border: 1px solid #3c2946;
+  position: fixed;
+  border-radius:50%;
 }
 
 li{
@@ -168,6 +179,39 @@ body{
     font-size: 50px;
   }
 
+  #pointer-dot {
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border: 2.5px solid white;
+      position: fixed;
+      border-radius: 4px;
+      z-index: 101;
+      pointer-events: none;
+      transition: border-color 0.5s;
+  }
+
+  #pointer-ring {
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      padding: 15px;
+      border: 2px solid #750c7e;
+      position: fixed;
+      border-radius: 100px;
+      z-index: 102;
+      pointer-events: none;
+  }
+
+  html {
+      cursor: none !important;
+  }
+
+  a {
+      cursor: none !important;
+  }
 
   .option-container{
     display: flex;
